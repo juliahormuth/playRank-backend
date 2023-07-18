@@ -16,8 +16,11 @@ public class GameController {
 
 
     @PostMapping()
-    public GameModel saveGame(@RequestBody GameModel game) {
-        GameModel gameCreated = this.gameService.saveNewGame(game);
+    public GameModel saveGame(@RequestBody GameDTO game) {
+        GameModel gameMapped = new GameModel();
+        gameMapped.setName(GameDTO.class.getName());
+
+        GameModel gameCreated = this.gameService.saveNewGame(gameMapped);
         return gameCreated;
     }
 

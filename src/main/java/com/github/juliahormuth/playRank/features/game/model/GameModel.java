@@ -18,9 +18,9 @@ public class GameModel {
     @Column(name = "name", length = 100)
     private String name;
 
-    @Column(name = "document", length = 11)
-    private String document;
+    @Column(name = "description", length = 11)
+    private String description;
 
-    @Column(name = "email", length = 100)
-    private String email;
+    @Column(name = "note", length = 100)
+    private Integer note;
 }
